@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["employment/react"],
+  extends: ['employment/react'],
 };
