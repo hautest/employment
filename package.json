@@ -11,7 +11,8 @@
     "prettier": "^3.0.3",
     "tsconfig": "workspace:*",
     "turbo": "latest",
-    "eslint-config-employment": "workspace:*"
+    "eslint-config-employment": "workspace:*",
+    "rollup": "^4.5.0"
   },
   "packageManager": "pnpm@8.6.10",
   "name": "employment"
