@@ -18,7 +18,7 @@ importers:
       tsconfig: link:packages/tsconfig
       turbo: 1.10.16
 
-  apps/web:
+  apps/employment:
     specifiers:
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
