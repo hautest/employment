@@ -51,10 +51,13 @@ const LINKS = [
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <div className='desktop:bg-white mobile:bg-black tablet:bg-red-400'>
         <p>
-          <Button />
           examples/basic&nbsp;
+          <Button />
+          <button type='button' className='bg-black'>
+            테스트 버튼
+          </button>
           <code className={styles.code}>web</code>
         </p>
         <div>
