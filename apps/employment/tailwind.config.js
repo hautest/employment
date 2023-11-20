@@ -1,4 +1,4 @@
-const { theme, spacing } = require('ui');
+const { theme } = require('ui');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -12,7 +12,4 @@ module.exports = {
   ],
   theme,
   plugins: [],
-  extend: {
-    spacing,
-  },
 };

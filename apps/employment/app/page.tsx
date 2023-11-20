@@ -51,7 +51,7 @@ const LINKS = [
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
-      <div className='desktop:bg-border mobile:bg-black tablet:bg-error'>
+      <div className='desktop:bg-border mobile:bg-black tablet:bg-error p-20'>
         <p>
           examples/basic&nbsp;
           <Button />
