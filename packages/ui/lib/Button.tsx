@@ -1,14 +1,11 @@
 'use client';
 
-export function Button() {
-  const handleClick = () => {
-    // eslint-disable-next-line no-console
-    console.log('Click happened');
-  };
+import { HTMLAttributes } from 'react';
 
-  return (
-    <button onClick={handleClick} type='button'>
-      Click
-    </button>
-  );
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  size?: 'small' | 'medium' | 'large';
+}
+
+export function Button({ size, ...rest }: ButtonProps) {
+  return <button {...rest}>Click</button>;
 }

@@ -7,5 +7,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'import/export': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/button-has-type': 'off',
   },
 };

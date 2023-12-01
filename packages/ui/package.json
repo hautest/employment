@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "generate:component": "turbo gen react-component",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "dependencies": {
     "react": "^18.2.0"
@@ -21,7 +22,6 @@
     "@types/react-dom": "^18.2.0",
     "eslint-config-employment": "workspace:*",
     "rollup-config": "workspace:*",
-    "tailwindcss": "^3.3.5",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   }
