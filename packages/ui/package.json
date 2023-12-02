@@ -13,7 +13,8 @@
     "dev": "rollup -c -w"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "@vanilla-extract/css": "^1.14.0"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.12",

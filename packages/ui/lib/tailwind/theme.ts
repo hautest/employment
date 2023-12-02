@@ -1,12 +1,4 @@
-import { Config } from 'tailwindcss';
-
-// const spacing = Object.assign(
-//   {},
-//   // eslint-disable-next-line @typescript-eslint/comma-dangle
-//   ...Array.from({ length: 201 }, (_, i) => ({ [i]: `${(i * 0.1).toFixed(1)}rem` }))
-// );
-
-export const theme: Config['theme'] = {
+export const theme = {
   screens: {
     tablet: '431px',
     desktop: '1024px',
