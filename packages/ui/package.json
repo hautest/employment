@@ -4,7 +4,6 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
-  "exports": "./dist/index.js",
   "type": "module",
   "scripts": {
     "lint": "eslint .",
@@ -12,9 +11,12 @@
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },
+  "exports": "./dist/index.js",
   "dependencies": {
-    "react": "^18.2.0",
-    "@vanilla-extract/css": "^1.14.0"
+    "@vanilla-extract/css": "^1.13.0",
+    "@vanilla-extract/recipes": "^0.5.1",
+    "@vanilla-extract/sprinkles": "^1.6.1",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.12",
@@ -23,7 +25,6 @@
     "@types/react-dom": "^18.2.0",
     "eslint-config-employment": "workspace:*",
     "rollup-config": "workspace:*",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.5.2"
+    "tsconfig": "workspace:*"
   }
 }

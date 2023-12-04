@@ -12,7 +12,8 @@
     "tsconfig": "workspace:*",
     "turbo": "latest",
     "eslint-config-employment": "workspace:*",
-    "rollup": "^3.15.0"
+    "rollup": "^3.15.0",
+    "typescript": "^5.2.2"
   },
   "packageManager": "pnpm@8.6.10",
   "name": "employment"
