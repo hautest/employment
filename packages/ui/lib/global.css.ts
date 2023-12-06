@@ -34,6 +34,7 @@ globalStyle('*', {
   boxSizing: 'border-box',
   WebkitTouchCallout: 'none',
   WebkitTapHighlightColor: 'transparent',
+  margin: 0,
 });
 
 globalStyle(

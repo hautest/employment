@@ -13,9 +13,10 @@
   },
   "exports": "./dist/index.js",
   "dependencies": {
-    "@vanilla-extract/css": "^1.13.0",
+    "@vanilla-extract/css": "^1.14.0",
     "@vanilla-extract/recipes": "^0.5.1",
     "@vanilla-extract/sprinkles": "^1.6.1",
+    "classnames": "^2.3.2",
     "react": "^18.2.0"
   },
   "devDependencies": {
