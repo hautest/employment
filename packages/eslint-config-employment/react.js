@@ -9,5 +9,7 @@ module.exports = {
     'import/export': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/button-has-type': 'off',
+    'object-curly-newline': 'off',
+    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
   },
 };

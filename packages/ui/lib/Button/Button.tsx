@@ -5,12 +5,9 @@ import { buttonCss } from './button.css';
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   size?: 'small' | 'medium' | 'large';
+  variants?: 'default' | 'secondary';
 }
 
-export function Button({ size, ...rest }: ButtonProps) {
-  return (
-    <button {...rest} className={buttonCss}>
-      Click
-    </button>
-  );
+export function Button({ size, variants, ...rest }: ButtonProps) {
+  return <button {...rest} className={buttonCss({ variants, size })} />;
 }

@@ -1,15 +1,31 @@
-import { Button, Typo } from 'ui';
+import { Button, Typo, Box } from 'ui';
+import ButtonTest from '../components/ButtonTest';
 
 function Page() {
   return (
     <div>
-      <Button />
+      <Box
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8',
+        }}
+      >
+        <Button variants='secondary'>클릭클릭클릭클릭</Button>
+        <Button>클릭클릭클릭클릭</Button>
+        <Button variants='secondary' size='medium'>
+          클릭클릭클릭클릭
+        </Button>
+        <Button size='medium'>클릭클릭클릭클릭</Button>
+        <Button variants='secondary' size='small'>
+          클릭클릭클릭클릭
+        </Button>
+        <Button size='small'>클릭클릭클릭클릭</Button>
+      </Box>
       <Typo as='p' variant='h1'>
         11
       </Typo>
-      <div className='bg-aaaa desktop:font-medium desktop:text-44 desktop:leading-128 tablet:font-medium tablet:text-32 tablet:leading-128 mobile:font-semiBold mobile:leading-124 mobile:text-29 desktop:bg-link'>
-        dsa
-      </div>
+      <ButtonTest />
     </div>
   );
 }

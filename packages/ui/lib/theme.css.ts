@@ -1,7 +1,12 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 
 function createObjectWithRemValues(num: number) {
-  const result: { [key: string]: string } = {};
+  const result: { [key: string]: string } = {
+    full: '100%',
+    half: '50%',
+    0: '0',
+    fit: 'fit-content',
+  };
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i <= num; i++) {
     result[i] = `${(i * 0.1).toFixed(1)}rem`;
