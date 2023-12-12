@@ -6,3 +6,4 @@ export * from './Box/Box';
 export * from './sprinkles.css';
 export * from './layers.css';
 export * from './Flex/Flex';
+export * from './Input/Input';

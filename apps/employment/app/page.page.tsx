@@ -1,4 +1,4 @@
-import { Button, Typo, Box, Flex } from 'ui';
+import { Button, Typo, Box, Flex, Input } from 'ui';
 import ButtonTest from '../components/ButtonTest';
 
 function Page() {
@@ -11,6 +11,10 @@ function Page() {
           gap: 8,
         }}
       >
+        <Input rightNode={<Box>3123</Box>} />
+        <Input size='small' rightNode={<Box css={{ minWidth: 'fit' }}>아이콘</Box>} />
+        <Input value='abc' disabled />
+        <Input value='123' size='small' disabled />
         <Typo color='disabled' variants='h1'>
           123 테스트 Test
         </Typo>
