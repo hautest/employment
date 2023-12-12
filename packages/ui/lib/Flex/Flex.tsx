@@ -1,8 +1,8 @@
-import { ElementType } from 'react';
+import { ElementType, HTMLAttributes } from 'react';
 import { Box } from '../Box/Box';
 import { Sprinkles } from '../sprinkles.css';
 
-interface FlexProps {
+interface FlexProps extends HTMLAttributes<HTMLElement> {
   css?: Omit<Sprinkles, 'display' | 'flexDirection' | 'justifyContent' | 'alignItems'>;
   as?: ElementType;
   direction?: Sprinkles['flexDirection'];

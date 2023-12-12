@@ -1,9 +1,9 @@
-import { Button, Typo, Box } from 'ui';
+import { Button, Typo, Box, Flex } from 'ui';
 import ButtonTest from '../components/ButtonTest';
 
 function Page() {
   return (
-    <div>
+    <Flex>
       <Box
         css={{
           display: 'flex',
@@ -37,7 +37,7 @@ function Page() {
         <Button size='small'>클릭클릭클릭클릭</Button>
       </Box>
       <ButtonTest />
-    </div>
+    </Flex>
   );
 }
 
