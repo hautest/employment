@@ -96,6 +96,7 @@ const colorProperties = defineProperties({
     color: colors,
     backgroundColor: colors,
     borderColor: colors,
+    fill: colors,
   },
 } as const);
 

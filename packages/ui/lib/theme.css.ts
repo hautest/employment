@@ -129,6 +129,7 @@ export const theme = createGlobalTheme('*', {
     98: '9.8rem',
     99: '9.9rem',
     100: '10.0rem',
+    150: '15.0rem',
     full: '100%',
     half: '50%',
     fit: 'fit-content',

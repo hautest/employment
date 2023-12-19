@@ -1,19 +1,24 @@
-import { ElementType, HTMLAttributes } from 'react';
-import { Box } from '../Box/Box';
+import { ElementType } from 'react';
+import { Box, BoxProps } from '../Box/Box';
 import { Sprinkles } from '../sprinkles.css';
 
-interface FlexProps extends HTMLAttributes<HTMLElement> {
+type FlexProps<C extends ElementType> = Omit<BoxProps<C>, 'css'> & {
   css?: Omit<Sprinkles, 'display' | 'flexDirection' | 'justifyContent' | 'alignItems'>;
-  as?: ElementType;
   direction?: Sprinkles['flexDirection'];
   justify?: Sprinkles['justifyContent'];
   align?: Sprinkles['alignItems'];
-}
+};
 
-export function Flex({ align, css, justify, direction, ...rest }: FlexProps) {
+export function Flex<C extends ElementType = 'div'>({
+  align,
+  css = {},
+  justify,
+  direction,
+  ...rest
+}: FlexProps<C>) {
   return (
     <Box
-      {...rest}
+      {...(rest as any)}
       css={{
         display: 'flex',
         direction,
