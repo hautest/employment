@@ -53,6 +53,7 @@ const properties = {
   width: spacing,
   wordBreak: ['break-all', 'keep-all', 'break-word', 'normal'],
   zIndex: [-1, 0, 1, 2, 3, 4, 5, 100],
+  flex: [1, 'none', 'auto', 'initial', 'inherit'],
   fontSize: spacing,
   lineHeight,
   fontWeight,
