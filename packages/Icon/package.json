@@ -1,0 +1,18 @@
+{
+  "name": "icon",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "create-svg": "npx @svgr/cli --replace-attr-values '#1C274C=currentColor' --no-dimensions --typescript --out-dir lib -- svgs",
+    "build": "pnpm create-svg && rollup -c"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "@types/react": "^18.2.0",
+    "rollup-config": "workspace:*",
+    "tsconfig": "workspace:*"
+  }
+}
