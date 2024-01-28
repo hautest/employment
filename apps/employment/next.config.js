@@ -4,7 +4,6 @@ const withVanillaExtract = createVanillaExtractPlugin();
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['ui'],
-  pageExtensions: ['page.tsx', 'page.ts'],
   compress: true,
 };
 

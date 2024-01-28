@@ -1,5 +1,4 @@
 import { Button, Typo, Box, Flex, Input } from 'ui';
-import ButtonTest from '../components/ButtonTest';
 
 function Page() {
   return (
@@ -40,7 +39,6 @@ function Page() {
         </Button>
         <Button size='small'>클릭클릭클릭클릭</Button>
       </Box>
-      <ButtonTest />
     </Flex>
   );
 }
