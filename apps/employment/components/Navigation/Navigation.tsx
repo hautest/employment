@@ -1,7 +1,7 @@
-import { ReactiveRender } from 'components';
 import { Box } from 'ui';
 import { ReactNode } from 'react';
 import MobileNav from './MobileNav';
+import ReactiveRender from '../ReactiveRender';
 
 interface NavigationProps {
   children: ReactNode;

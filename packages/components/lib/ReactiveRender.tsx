@@ -1,48 +1,24 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Box } from 'ui';
 
-interface ReactiveRenderProps {
+export interface ReactiveRenderProps {
   mobile: ReactNode;
   tablet: ReactNode;
   desktop: ReactNode;
+  screen?: 'desktop' | 'tablet' | 'mobile';
 }
 
-export function ReactiveRender({ desktop, mobile, tablet }: ReactiveRenderProps) {
+export function ReactiveRender({
+  desktop,
+  mobile,
+  tablet,
+  screen = 'mobile',
+}: ReactiveRenderProps) {
   return (
     <>
-      <Box
-        css={{
-          display: {
-            mobile: 'block',
-            tablet: 'none',
-            desktop: 'none',
-          },
-        }}
-      >
-        {mobile}
-      </Box>
-      <Box
-        css={{
-          display: {
-            mobile: 'none',
-            tablet: 'block',
-            desktop: 'none',
-          },
-        }}
-      >
-        {tablet}
-      </Box>
-      <Box
-        css={{
-          display: {
-            mobile: 'none',
-            tablet: 'none',
-            desktop: 'block',
-          },
-        }}
-      >
-        {desktop}
-      </Box>
+      {screen === 'mobile' && <Box>{mobile}</Box>}
+      {screen === 'tablet' && <Box>{tablet}</Box>}
+      {screen === 'desktop' && <Box>{desktop}</Box>}
     </>
   );
 }
