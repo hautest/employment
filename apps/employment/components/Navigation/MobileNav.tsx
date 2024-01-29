@@ -1,55 +1,44 @@
-import { Flex } from 'ui';
+import { Box, Flex } from 'ui';
 import { Interview, Home, File, Community, User } from 'icon';
 import NavItem from './NavItem';
+import { mobileNavCss } from './navigation.css';
 
 function MobileNav() {
   return (
-    <Flex
+    <Box
       css={{
         position: 'fixed',
         backgroundColor: 'white',
         left: 0,
-        bottom: {
-          mobile: 0,
-        },
-        height: {
-          tablet: 'full',
-          desktop: 'full',
-          mobile: 50,
-        },
-        direction: {
-          desktop: 'column',
-          tablet: 'column',
-          mobile: 'row',
-        },
-        width: {
-          mobile: 'full',
-          desktop: 150,
-          tablet: 150,
-        },
-        justify: {
-          desktop: 'flex-start',
-          tablet: 'flex-start',
-          mobile: 'space-around',
-        },
+        bottom: 0,
+        width: 'full',
       }}
     >
-      <NavItem icon={<Home />} href='/'>
-        홈
-      </NavItem>
-      <NavItem icon={<File />} href='/feedback'>
-        첨삭
-      </NavItem>
-      <NavItem icon={<Community />} href='/community'>
-        커뮤니티
-      </NavItem>
-      <NavItem icon={<Interview />} href='/interview'>
-        모의면접
-      </NavItem>
-      <NavItem icon={<User />} href='/my'>
-        내정보
-      </NavItem>
-    </Flex>
+      <Flex
+        css={{
+          direction: 'row',
+          width: 'full',
+          justify: 'space-around',
+        }}
+        className={mobileNavCss}
+      >
+        <NavItem icon={<Home />} href='/'>
+          홈
+        </NavItem>
+        <NavItem icon={<File />} href='/feedback'>
+          첨삭
+        </NavItem>
+        <NavItem icon={<Community />} href='/community'>
+          커뮤니티
+        </NavItem>
+        <NavItem icon={<Interview />} href='/interview'>
+          모의면접
+        </NavItem>
+        <NavItem icon={<User />} href='/my'>
+          내정보
+        </NavItem>
+      </Flex>
+    </Box>
   );
 }
 

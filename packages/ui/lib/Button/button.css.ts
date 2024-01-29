@@ -3,7 +3,7 @@ import { recipe } from '@vanilla-extract/recipes';
 import { sprinkles } from '../sprinkles.css';
 
 export const buttonCss = recipe({
-  base: sprinkles({ borderRadius: 4, width: 'fit' }),
+  base: sprinkles({ borderRadius: 4 }),
   variants: {
     variants: {
       default: [
@@ -28,6 +28,7 @@ export const buttonCss = recipe({
           fontSize: 18,
           fontWeight: 'normal',
           px: 52,
+          width: 'full',
         }),
       ],
       medium: [
@@ -36,6 +37,7 @@ export const buttonCss = recipe({
           fontSize: 16,
           fontWeight: 'normal',
           px: 28,
+          width: 'fit',
         }),
       ],
       small: [
@@ -44,6 +46,7 @@ export const buttonCss = recipe({
           fontSize: 14,
           fontWeight: 'normal',
           px: 12,
+          width: 'fit',
         }),
       ],
     },

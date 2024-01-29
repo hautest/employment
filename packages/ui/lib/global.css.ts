@@ -10,12 +10,15 @@ globalStyle('html', {
       minHeight: '-webkit-fill-available',
     },
   },
-  backgroundColor: theme.colors.background,
+  backgroundColor: theme.colors.white,
 });
 
 globalStyle('body', {
   height: '100%',
-  margin: 0,
+  marginBottom: 'env(safe-area-inset-bottom)',
+  marginTop: 'env(safe-area-inset-top)',
+  marginLeft: 'env(safe-area-inset-left)',
+  marginRight: 'env(safe-area-inset-right)',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
 });

@@ -1,11 +1,30 @@
 import { ReactiveRender } from 'components';
+import { Box } from 'ui';
+import { ReactNode } from 'react';
 import MobileNav from './MobileNav';
 
-function Navigation() {
+interface NavigationProps {
+  children: ReactNode;
+}
+
+function Navigation({ children }: NavigationProps) {
   return (
     <ReactiveRender
       desktop={<div>desktop</div>}
-      mobile={<MobileNav />}
+      mobile={
+        <>
+          <Box
+            css={{
+              height: 'full',
+              width: 'full',
+              marginBottom: 50,
+            }}
+          >
+            {children}
+          </Box>
+          <MobileNav />
+        </>
+      }
       tablet={<div>tablet</div>}
     />
   );
