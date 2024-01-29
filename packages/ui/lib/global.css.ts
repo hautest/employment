@@ -1,4 +1,5 @@
 import { globalStyle } from '@vanilla-extract/css';
+import { theme } from './theme.css';
 
 globalStyle('html', {
   fontSize: '62.5%',
@@ -9,6 +10,7 @@ globalStyle('html', {
       minHeight: '-webkit-fill-available',
     },
   },
+  backgroundColor: theme.colors.background,
 });
 
 globalStyle('body', {

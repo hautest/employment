@@ -14,6 +14,7 @@ function Page() {
         <Input size='small' rightNode={<Box css={{ minWidth: 'fit' }}>아이콘</Box>} />
         <Input value='abc' disabled />
         <Input value='123' size='small' disabled />
+        <Input value='123' size='small' disabled />
         <Typo color='disabled' variants='h1'>
           123 테스트 Test
         </Typo>

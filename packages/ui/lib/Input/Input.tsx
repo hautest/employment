@@ -8,7 +8,7 @@ interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ size = 'normal', disabled, rightNode, ...rest }: InputProps, ref) => (
+  ({ size = 'normal', disabled = false, rightNode, ...rest }: InputProps, ref) => (
     <Flex
       className={inputWrapperCss({
         size,
