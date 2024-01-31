@@ -101,6 +101,23 @@ const colorProperties = defineProperties({
   },
 } as const);
 
-export const sprinkles = createSprinkles(responsiveProperties, colorProperties);
+const selectorProperties = defineProperties({
+  conditions: {
+    default: {},
+    hover: { selector: '&:hover' },
+    focus: { selector: '&:focus' },
+    active: { selector: '&:active' },
+    disabled: { selector: '&:disabled' },
+  },
+  defaultCondition: 'default',
+  properties: {
+    color: colors,
+    backgroundColor: colors,
+    borderColor: colors,
+    fill: colors,
+  },
+} as const);
+
+export const sprinkles = createSprinkles(responsiveProperties, colorProperties, selectorProperties);
 
 export type Sprinkles = Parameters<typeof sprinkles>[0];

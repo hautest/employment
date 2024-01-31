@@ -130,6 +130,7 @@ export const theme = createGlobalTheme('*', {
     99: '9.9rem',
     100: '10.0rem',
     150: '15.0rem',
+    170: '17.0rem',
     full: '100%',
     half: '50%',
     fit: 'fit-content',

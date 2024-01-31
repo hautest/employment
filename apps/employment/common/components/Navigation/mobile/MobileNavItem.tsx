@@ -1,19 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ReactNode } from 'react';
 import { Box, Flex, Typo } from 'ui';
+import { NavItemProps } from '../common/interface';
+import { useNavColor } from '../common/hooks/useNavColor';
 
-interface NavItemProps {
-  children: ReactNode;
-  icon: ReactNode;
-  href: string;
-}
-
-function NavItem({ children, icon, href }: NavItemProps) {
-  const path = usePathname();
-  const color = path === href ? 'sky' : 'black';
+function MobileNavItem({ children, icon, href }: NavItemProps) {
+  const color = useNavColor(href);
 
   return (
     <Flex
@@ -39,4 +32,4 @@ function NavItem({ children, icon, href }: NavItemProps) {
   );
 }
 
-export default NavItem;
+export default MobileNavItem;
