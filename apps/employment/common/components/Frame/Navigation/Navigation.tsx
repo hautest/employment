@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import ReactiveRender from '../ReactiveRender';
+import ReactiveRender from '../../ReactiveRender';
 import MobileNav from './mobile/MobileNav';
 import DesktopNav from './desktop/DesktopNav';
 

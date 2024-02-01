@@ -1,3 +1,4 @@
+export { default as Back } from './Back';
 export { default as Community } from './Community';
 export { default as File } from './File';
 export { default as Home } from './Home';

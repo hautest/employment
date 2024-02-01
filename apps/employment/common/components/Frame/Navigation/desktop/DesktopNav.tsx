@@ -1,9 +1,12 @@
 import { Box } from 'ui';
 import { PersonalStatement, Community, Home, Interview, Resume, User, Language } from 'icon';
+import { cookies } from 'next/headers';
 import { NavProps } from '../common/interface';
 import DesktopNavItem from './DesktopNavItem';
 
 function DesktopNav({ children }: NavProps) {
+  const { value: accessToken } = cookies().get('accessToken') || {};
+
   return (
     <>
       <Box
@@ -45,8 +48,8 @@ function DesktopNav({ children }: NavProps) {
         <DesktopNavItem icon={<Community />} href='/community'>
           커뮤니티
         </DesktopNavItem>
-        <DesktopNavItem icon={<User />} href='/my'>
-          내 정보
+        <DesktopNavItem icon={<User />} href={accessToken ? '/my' : '/login'}>
+          {accessToken ? '내정보' : '로그인'}
         </DesktopNavItem>
       </Box>
     </>

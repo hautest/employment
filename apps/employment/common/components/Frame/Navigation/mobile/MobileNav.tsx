@@ -1,10 +1,13 @@
 import { Box, Flex } from 'ui';
 import { Interview, Home, File, Community, User } from 'icon';
+import { cookies } from 'next/headers';
 import { mobileNavCss } from './mobileNav.css';
 import MobileNavItem from './MobileNavItem';
 import { NavProps } from '../common/interface';
 
 function MobileNav({ children }: NavProps) {
+  const { value: accessToken } = cookies().get('accessToken') || {};
+
   return (
     <>
       <Box
@@ -45,8 +48,8 @@ function MobileNav({ children }: NavProps) {
           <MobileNavItem icon={<Interview />} href='/interview'>
             모의면접
           </MobileNavItem>
-          <MobileNavItem icon={<User />} href='/my'>
-            내정보
+          <MobileNavItem icon={<User />} href={accessToken ? '/my' : '/login'}>
+            {accessToken ? '내정보' : '로그인'}
           </MobileNavItem>
         </Flex>
       </Box>
