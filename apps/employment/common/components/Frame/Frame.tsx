@@ -1,8 +1,8 @@
 import { Box } from 'ui';
 import { ReactNode } from 'react';
-import { cookies } from 'next/headers';
 import Header from './Header/Header';
 import Navigation from './Navigation/Navigation';
+import { viewportCookie } from '../../utils/cookies/viewportCookie';
 
 interface FrameProps {
   header?: {
@@ -16,7 +16,8 @@ interface FrameProps {
 
 function Frame({ header, children, navigation }: FrameProps) {
   const { left, right, title } = header || {};
-  const viewport = cookies().get('viewport')?.value;
+  const { getValue } = viewportCookie();
+  const viewport = getValue().value;
 
   return (
     <Box css={{ paddingTop: header ? 50 : 0 }}>

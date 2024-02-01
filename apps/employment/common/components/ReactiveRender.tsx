@@ -2,12 +2,12 @@ import {
   ReactiveRender as CommonReactiveRender,
   ReactiveRenderProps as CommonReactiveRenderProps,
 } from 'components';
-import { cookies } from 'next/headers';
+import { viewportCookie } from '../utils/cookies/viewportCookie';
 
 function ReactiveRender(props: Omit<CommonReactiveRenderProps, 'screen'>) {
-  const viewport = cookies().get('viewport')?.value as CommonReactiveRenderProps['screen'];
+  const { getValue } = viewportCookie();
 
-  return <CommonReactiveRender {...props} screen={viewport} />;
+  return <CommonReactiveRender {...props} screen={getValue().value} />;
 }
 
 export default ReactiveRender;
