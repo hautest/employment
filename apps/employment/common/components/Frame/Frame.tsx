@@ -20,7 +20,7 @@ function Frame({ header, children, navigation }: FrameProps) {
   const viewport = getValue().value;
 
   return (
-    <Box css={{ paddingTop: header ? 50 : 0 }}>
+    <Box css={{ paddingTop: viewport === 'mobile' && header ? 50 : 0 }}>
       {header && viewport === 'mobile' && (
         <Header title={title}>
           {left}

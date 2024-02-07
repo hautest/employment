@@ -20,6 +20,7 @@ export const theme = createGlobalTheme('*', {
     spacer: '#D9D1E0',
     white: '#FFFFFF',
     sky: '#95C6EE',
+    kakao: '#FEE501',
   },
   fontWeight: {
     normal: '400',

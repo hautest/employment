@@ -3,13 +3,7 @@ import Frame from '../common/components/Frame/Frame';
 
 function Page() {
   return (
-    <Frame
-      header={{
-        left: <Frame.Back />,
-        title: '취업',
-      }}
-      navigation
-    >
+    <Frame navigation>
       <Flex>
         <Box
           css={{

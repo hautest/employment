@@ -46,7 +46,7 @@ export const inputWrapperCss = recipe({
     size: {
       normal: sprinkles({
         p: 12,
-        height: 44,
+        height: 45,
       }),
       small: sprinkles({
         py: 8,

@@ -9,20 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.3",
+    "@vanilla-extract/recipes": "^0.5.1",
+    "components": "workspace:*",
+    "icon": "workspace:*",
+    "install": "^0.13.0",
     "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*",
-    "icon": "workspace:*",
-    "components": "workspace:*"
+    "ui": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
+    "@vanilla-extract/css": "^1.14.0",
     "@vanilla-extract/next-plugin": "^2.3.2",
     "eslint-config-employment": "workspace:*",
-    "tsconfig": "workspace:*",
-    "@vanilla-extract/css": "^1.14.0"
+    "tsconfig": "workspace:*"
   }
 }

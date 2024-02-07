@@ -57,6 +57,7 @@ const properties = {
   fontSize: spacing,
   lineHeight,
   fontWeight,
+  transform: ['none', 'translateX(-50%)', 'translateY(-50%)', 'translate(-50%, -50%)'],
 } as const;
 
 const responsiveProperties = defineProperties({

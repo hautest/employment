@@ -1,11 +1,12 @@
 import { Box } from 'ui';
 import { PersonalStatement, Community, Home, Interview, Resume, User, Language } from 'icon';
-import { cookies } from 'next/headers';
 import { NavProps } from '../common/interface';
 import DesktopNavItem from './DesktopNavItem';
+import { accessTokenCookie } from '../../../../utils/accessTokenCookie';
 
 function DesktopNav({ children }: NavProps) {
-  const { value: accessToken } = cookies().get('accessToken') || {};
+  const { getValue } = accessTokenCookie();
+  const accessToken = getValue()?.value;
 
   return (
     <>

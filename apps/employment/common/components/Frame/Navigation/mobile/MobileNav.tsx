@@ -1,12 +1,13 @@
 import { Box, Flex } from 'ui';
 import { Interview, Home, File, Community, User } from 'icon';
-import { cookies } from 'next/headers';
 import { mobileNavCss } from './mobileNav.css';
 import MobileNavItem from './MobileNavItem';
 import { NavProps } from '../common/interface';
+import { accessTokenCookie } from '../../../../utils/accessTokenCookie';
 
 function MobileNav({ children }: NavProps) {
-  const { value: accessToken } = cookies().get('accessToken') || {};
+  const { getValue } = accessTokenCookie();
+  const accessToken = getValue()?.value;
 
   return (
     <>

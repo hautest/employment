@@ -75,4 +75,5 @@ globalStyle('button', {
   cursor: 'pointer',
   border: 'none',
   padding: 0,
+  fontFamily: 'inherit',
 });
